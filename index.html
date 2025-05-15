@@ -9,21 +9,21 @@
 </head>
 
 <body>
+    <h1>FESTY COOL</h1>
+    <h2>Festival cultural internacional</h2>
     <header>
-        <h1>FESTY COOL</h1>
-        <h2>Festival cultural internacional</h2>
-        <nav>
-            <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">Programación</a></li>
-                <li><a href="#">información</a></li>
-                <li><a href="#">galería</a></li>
-                <li><a href="#">entradas</a></li>
-                <li><a href="#">contacto</a></li>
-            </ul>
+        <nav class="navbar" id="navbar">
+        <div class="overlay" id="overlay"></div>
+        <button class="close-btn" id="closeBtn">&times;</button>
+            <a href="#">inicio</a>
+            <a href="#">Programación</a>
+            <a href="#">información</a>
+            <a href="#">galería</a>
+            <a href="#">entradas</a>
+            <a href="#">contacto</a>
         </nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
     </header>
-
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -66,7 +66,7 @@
             <a href="#" class="boton">COMPRAR ENTRADAS</a>
         </div>
     </section>
-   
+
     <section class="galeria">
         <h3>Galería</h3>
         <div class="imagenes">
@@ -81,6 +81,27 @@
         <p>📞 3234165587</p>
         <p>📍 Medellín, Colombia</p>
     </footer>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navbar = document.getElementById("navbar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("closeBtn");
+      
+        hamburger.addEventListener("click", () => {
+          navbar.classList.add("active");
+          overlay.classList.add("active");
+        });
+      
+        closeBtn.addEventListener("click", () => {
+          navbar.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      
+        overlay.addEventListener("click", () => {
+          navbar.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      </script>
 </body>
 
 </html>
